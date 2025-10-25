@@ -34,6 +34,8 @@ const io = new Server(server, {
   }
 });
 
+console.log(process.env.FRONTEND_URL)
+
 const PORT = process.env.PORT || 5000;
 
 // Middleware
