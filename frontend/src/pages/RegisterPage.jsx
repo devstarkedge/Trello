@@ -33,6 +33,7 @@ const RegisterPage = () => {
     fetchDepartments();
   }, []);
 
+  
   const onSubmit = async (e) => {
     e.preventDefault();
     setError('');
