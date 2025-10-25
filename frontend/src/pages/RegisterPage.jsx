@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
-import axios from 'axios';
+
+import api from '../services/api'
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ const RegisterPage = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const res = await axios.get('/departments');
+        const res = await api.get('/departments');
         setDepartments(res.data.data);
       } catch (err) {
         console.error('Failed to fetch departments:', err);
@@ -33,7 +34,7 @@ const RegisterPage = () => {
     fetchDepartments();
   }, []);
 
-  
+
   const onSubmit = async (e) => {
     e.preventDefault();
     setError('');
