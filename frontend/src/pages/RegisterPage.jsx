@@ -49,6 +49,8 @@ const RegisterPage = () => {
     }
   };
 
+  console.log(import.meta.env.VITE_BACKEND_URL);
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-800 to-pink-400">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-2xl">
