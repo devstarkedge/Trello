@@ -24,7 +24,7 @@ const RegisterPage = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const res = await axios.get('/api/departments');
+        const res = await axios.get('/departments');
         setDepartments(res.data.data);
       } catch (err) {
         console.error('Failed to fetch departments:', err);
